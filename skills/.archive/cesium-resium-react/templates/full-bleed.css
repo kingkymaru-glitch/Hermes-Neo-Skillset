@@ -1,0 +1,31 @@
+/* Append to App.css and import './App.css' from main.jsx.
+   Overrides the Vite template's #root 1126px centered column. */
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  border-inline: none;
+}
+
+.dt-root {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dt-viewer {
+  width: 100% !important;
+  height: 100% !important;
+}

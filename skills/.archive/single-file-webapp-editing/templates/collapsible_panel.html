@@ -1,0 +1,81 @@
+<!-- Known-good collapsible side panel with an IN-FLOW STICKY TITLE BAR.
+     Copy + modify per panel. This is the fix for the "collapse button overlaps
+     the first content block" trap: the toggle is NOT absolutely positioned — it
+     lives in a sticky header that is part of normal flow, so it can never float
+     over content. Negative margins (-16px = panel padding) bleed the header to
+     the panel's rounded edges so it reads as intentional app chrome. -->
+
+<style>
+  #left-panel, #right-panel { transition: transform .25s ease; }
+  #left-panel.collapsed  { transform: translateX(-118%); }
+  #right-panel.collapsed { transform: translateX(118%); }
+
+  /* In-flow sticky header — the anti-overlap pattern. */
+  .panel-header {
+    position: sticky; top: 0; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between;
+    margin: -16px -16px 12px;            /* cancel panel p-4 padding, span full width */
+    padding: 12px 16px;
+    background: rgba(15,23,42,.92);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(148,163,184,.18);
+    border-radius: .5rem .5rem 0 0;
+  }
+  .panel-title { font-size: 11px; font-weight: 700; letter-spacing: .1em;
+                 text-transform: uppercase; color: #67e8f9; }
+  .panel-toggle { width: 36px; height: 36px; display: inline-flex;
+                  align-items: center; justify-content: center; font-size: 16px;
+                  color: #67e8f9; border-radius: 8px;
+                  transition: background .15s ease, color .15s ease; }
+  .panel-toggle:hover  { background: rgba(34,211,238,.14); color: #a5f3fc; }
+  .panel-toggle:active { background: rgba(34,211,238,.24); }
+
+  /* Floating reopen button — shows ONLY when the panel is collapsed. */
+  .panel-reopen { position: fixed; top: calc(50% + env(safe-area-inset-top,0px));
+                  transform: translateY(-50%); width: 48px; height: 48px;
+                  border-radius: 9999px; display: none; align-items: center;
+                  justify-content: center; font-size: 20px; z-index: 30;
+                  box-shadow: 0 4px 14px rgba(0,0,0,.55); }
+  #left-reopen  { left:  calc(env(safe-area-inset-left,0px)  + 10px); }
+  #right-reopen { right: calc(env(safe-area-inset-right,0px) + 10px); }
+</style>
+
+<!-- LEFT PANEL -->
+<div id="left-panel" class="absolute top-20 left-4 w-80 glass-panel rounded-lg p-4 z-10 flex flex-col gap-4 max-h-[calc(100vh-100px)] overflow-y-auto">
+  <div class="panel-header">
+    <span class="panel-title">Tools</span>
+    <button id="left-collapse" class="panel-toggle" aria-label="Collapse tools panel">&#10094;</button>
+  </div>
+  <!-- ...panel body content goes here... -->
+</div>
+
+<!-- RIGHT PANEL (mirror) -->
+<div id="right-panel" class="absolute top-20 right-4 w-72 glass-panel rounded-lg p-4 z-10 flex flex-col gap-4 max-h-[calc(100vh-100px)] overflow-y-auto">
+  <div class="panel-header">
+    <span class="panel-title">Editor</span>
+    <button id="right-collapse" class="panel-toggle" aria-label="Collapse editor panel">&#10095;</button>
+  </div>
+  <!-- ...panel body content goes here... -->
+</div>
+
+<!-- Floating reopen buttons (shown when collapsed) -->
+<button id="left-reopen"  class="panel-reopen glass-panel btn-secondary text-cyan-300" aria-label="Open tools panel">&#9776;</button>
+<button id="right-reopen" class="panel-reopen glass-panel btn-secondary text-cyan-300" aria-label="Open editor panel">&#9881;</button>
+
+<script>
+  function setupCollapse(panelId, collapseBtnId, reopenBtnId){
+    const panel = document.getElementById(panelId);
+    const collapseBtn = document.getElementById(collapseBtnId);
+    const reopenBtn = document.getElementById(reopenBtnId);
+    const collapse = () => { panel.classList.add('collapsed');    reopenBtn.style.display = 'flex'; };
+    const expand   = () => { panel.classList.remove('collapsed'); reopenBtn.style.display = 'none'; };
+    collapseBtn.addEventListener('click', collapse);
+    reopenBtn.addEventListener('click', expand);
+    const mq = window.matchMedia('(max-width: 768px)');
+    const apply = (isMobile) => { isMobile ? collapse() : expand(); };
+    apply(mq.matches);
+    if (mq.addEventListener) mq.addEventListener('change', e => apply(e.matches));
+  }
+  setupCollapse('left-panel','left-collapse','left-reopen');
+  setupCollapse('right-panel','right-collapse','right-reopen');
+</script>

@@ -1,0 +1,111 @@
+{
+  "jobs": [
+    {
+      "id": "2f1a9b3ea855",
+      "name": "weekly-trust-rerank",
+      "prompt": "Run the weekly fact_store trust re-ranking so the harness compounds memory from usage. Steps: 1) Dry-run and report top movers: python3 ~/.hermes/scripts/trust_rerank.py --limit 8 (read output). 2) Apply the re-rank: python3 ~/.hermes/scripts/trust_rerank.py --apply. 3) Briefly report (a) how many facts had usage signal, (b) the top 3 trust movers, (c) confirm apply succeeded. Do NOT touch any facts with retrieval_count=0. This is a local-only self-improvement job — just summarize the result in the final response.",
+      "skills": [
+        "gbrain-memory-patterns"
+      ],
+      "skill": "gbrain-memory-patterns",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "nous",
+      "model_snapshot": "tencent/hy3:free",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 1",
+        "display": "0 6 * * 1"
+      },
+      "schedule_display": "0 6 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-20T20:35:44.436482+08:00",
+      "next_run_at": "2026-10-19T06:00:00+08:00",
+      "last_run_at": "2026-10-12T06:00:16.864896+08:00",
+      "last_status": "error",
+      "last_error": "Blocked: prompt matches threat pattern 'prompt_injection'. Cron prompts must not contain injection or exfiltration payloads.",
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-12T06:00:00+08:00",
+        "dispatched_at": "2026-10-12T06:00:16.447581+08:00",
+        "lateness_seconds": 16.4,
+        "kind": "on_time"
+      },
+      "fire_claim": null,
+      "failure_streak": 2
+    },
+    {
+      "id": "90f2fe8bfc35",
+      "name": "Weekly Security Audit — LUNAV, R-Tessera, CDM",
+      "prompt": "You are Neo, CEO of the Hermes agent team. Every Monday, coordinate a full security audit of all three production systems.\n\n## Team\n- **Max** — Technical expert, audits LUNAV Solutions + CDM\n- **Lisa** — Technical expert, audits R-Tessera\n- **Neo (you)** — CEO, consolidates findings and reports to MARU\n\n## Task\n1. Create a kanban board called 'security-audit-YYYY-MM-DD' (use today's date)\n2. Create 3 audit tasks:\n   - 'LUNAV Solutions — Full Security Audit' assigned to max. Audit live at lunavsolution.vercel.app. Standards: OWASP Top 10, OWASP ASVS, NIST CSF. Areas: auth/session, authorization/RLS, input validation, security headers, API security, data protection, dependencies, error handling. Deliverable: ranked findings (Critical/High/Medium/Low) with remediation.\n   - 'R-Tessera — Full Security Audit' assigned to lisa. Audit live at r-tessera.vercel.app. Same standards and areas.\n   - 'CDM — Full Security Audit' assigned to max. Audit CDM Surroundings (local-data only). Same standards and areas.\n3. Create a CEO review task assigned to yourself (default) with all 3 audit tasks as parents. Body: 'Consolidate all findings into executive summary, prioritize by risk, present to MARU.'\n4. Start the gateway so tasks get picked up: hermes gateway start\n5. Log the audit kickoff to team memory: team_memory_add('neo', 'security', 'audit', 'Weekly security audit kicked off for LUNAV, R-Tessera, CDM', 'audit,security,weekly')\n6. Report to MARU: 'Weekly security audit started. Max is auditing LUNAV + CDM, Lisa is auditing R-Tessera. Results will be consolidated and presented when complete.'\n\n## Important\n- Use hermes kanban boards create, hermes kanban create, hermes gateway start\n- The kanban board slug should be kebab-case with today's date\n- All tasks must have proper --body, --assignee, --json flags\n- The CEO review task must reference all 3 audit tasks as --parent",
+      "skills": [
+        "team-memory"
+      ],
+      "skill": "team-memory",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "custom",
+      "model_snapshot": "hive-35b",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1",
+        "display": "every monday 9am"
+      },
+      "schedule_display": "every monday 9am",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-06T21:37:52.638736+08:00",
+      "next_run_at": "2026-10-19T09:00:00+08:00",
+      "last_run_at": "2026-10-12T09:00:48.086852+08:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'custom' -> 'nous'; model 'hive-35b' -> 'meituan/longcat-2.5-preview:free'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit 90f2fe8bfc35 --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-12T09:00:00+08:00",
+        "dispatched_at": "2026-10-12T09:00:45.986092+08:00",
+        "lateness_seconds": 46.0,
+        "kind": "on_time"
+      },
+      "fire_claim": null,
+      "drift_alerted": true
+    }
+  ],
+  "updated_at": "2026-10-12T09:00:48.087316+08:00"
+}

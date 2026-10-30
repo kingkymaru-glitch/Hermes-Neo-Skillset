@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>MindAR — known-good</title>
+  <script src="assets/aframe.min.js"></script>
+  <script src="assets/mindar-image-aframe.prod.js"></script>
+  <style>html,body{margin:0;height:100%}#gate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:60}#status{position:fixed;top:10px;left:10px;z-index:55;background:rgba(0,0,0,.55);padding:.4rem .7rem;border-radius:8px;font-size:.8rem}</style>
+</head>
+<body>
+  <div id="gate"><button id="startBtn">Tap to start camera</button></div>
+  <div id="status"></div>
+
+  <!-- RULE 1: imageTargetSrc on the tag AT PARSE TIME, not after init -->
+  <a-scene mindar-image="imageTargetSrc: assets/card.mind; autoStart:false; uiScanning: no; uiLoading: no; uiError: no;"
+           color-space="sRGB" embedded renderer="colorManagement:true"
+           vr-mode-ui="enabled:false" device-orientation-permission-ui="enabled:false">
+    <a-camera position="0 0 0" look-controls="enabled:false"></a-camera>
+    <a-entity id="target" mindar-image-target="targetIndex: 0">
+      <a-entity id="modelAnchor"></a-entity>
+    </a-entity>
+  </a-scene>
+
+  <script>
+    const sceneEl = document.querySelector('a-scene');
+    const setStatus = (m) => { document.getElementById('status').textContent = m; };
+    document.getElementById('startBtn').addEventListener('click', async () => {
+      document.getElementById('gate').style.display = 'none';
+      setStatus('starting camera…');
+      try {
+        // RULE 2: start() already scans — do NOT call startScanning()
+        await sceneEl.systems['mindar-image-system'].start();
+        setStatus('scanning — point at the marker');
+      } catch (e) { setStatus('camera error: ' + e.message); }
+    });
+    document.getElementById('target').addEventListener('targetFound', () => setStatus('marker found'));
+  </script>
+</body>
+</html>

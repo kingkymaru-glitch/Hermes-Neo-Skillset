@@ -1,0 +1,112 @@
+{
+  "slide_size": "16:9",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "TITLE — Product / Thesis",
+      "subtitle": "One-line positioning\nNeo · for MARU · YYYY-MM-DD"
+    },
+    {
+      "layout": "title_content",
+      "title": "Market — capital is rotating into <vertical/atom>",
+      "bullets": [
+        {"level": 0, "bold": true, "text": "Robotics / Physical AI funding: ~$14B in 2025, +70% YoY"},
+        {"level": 0, "bold": true, "text": "Defense Tech: $49B raised (2025)"},
+        {"level": 0, "bold": true, "text": "Vertical AI: $2.1B healthcare alone (2025)"},
+        {"level": 0, "bold": true, "text": "GovTech: $357B US spend projected (2026)"},
+        {"level": 0, "text": "Gartner 2026 top trend: Multiagent Systems — agentic gap."}
+      ],
+      "charts": [
+        {
+          "type": "bar",
+          "title": "2025 startup funding ($B)",
+          "categories": ["Robotics / Physical AI", "Defense Tech", "Vertical AI (healthcare)"],
+          "series": {"Funding": [14, 49, 2.1]}
+        }
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Why generic AI is no longer defensible",
+      "bullets": [
+        {"level": 0, "bold": true, "text": "\"If it can be rebuilt in weeks with an LLM, it isn't defensible.\""},
+        {"level": 0, "text": "Durable moats = proprietary domain data + compliance + offline/edge in a regulated vertical."}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Our position: defensible, not yet agentic",
+      "bullets": [
+        {"level": 0, "text": "Top-left on defensibility map — hard to copy, regulated, domain-heavy."},
+        {"level": 0, "text": "Premium arrow to pull is RIGHT: toward agentic automation (thin layer, no rebuild)."}
+      ],
+      "shapes": [
+        {"shape": "rectangle", "left": 0.5, "top": 1.5, "width": 6.0, "height": 0.5, "fill": "1F3864", "text": "HIGH DEFENSIBILITY"},
+        {"shape": "rounded_rectangle", "left": 0.5, "top": 2.2, "width": 3.0, "height": 1.2, "fill": "2E75B6", "text": "Product A"},
+        {"shape": "rounded_rectangle", "left": 3.7, "top": 2.2, "width": 3.0, "height": 1.2, "fill": "2E75B6", "text": "Product B"},
+        {"shape": "rectangle", "left": 0.5, "top": 3.7, "width": 6.0, "height": 0.5, "fill": "C00000", "text": "LOW DEFENSIBILITY"},
+        {"shape": "right_arrow", "left": 7.0, "top": 2.6, "width": 2.0, "height": 0.5, "fill": "ED7D31", "text": ""},
+        {"shape": "rectangle", "left": 9.2, "top": 2.2, "width": 3.0, "height": 1.2, "fill": "7030A0", "text": "AGENTIC (gap)"}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Product A — Vertical AI positioning",
+      "bullets": [
+        {"level": 0, "text": "What it is today (one line)."},
+        {"level": 0, "bold": true, "text": "Target agentic flow + pitch line."}
+      ],
+      "shapes": [
+        {"shape": "oval", "left": 0.4, "top": 3.3, "width": 1.6, "height": 0.7, "fill": "2E75B6", "text": "Source"},
+        {"shape": "right_arrow", "left": 2.0, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "rounded_rectangle", "left": 2.7, "top": 3.3, "width": 1.7, "height": 0.7, "fill": "1F3864", "text": "Inference"},
+        {"shape": "right_arrow", "left": 4.5, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "diamond", "left": 5.2, "top": 3.2, "width": 1.5, "height": 0.9, "fill": "ED7D31", "text": "Vision Agent"},
+        {"shape": "right_arrow", "left": 6.9, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "rounded_rectangle", "left": 7.6, "top": 3.3, "width": 1.7, "height": 0.7, "fill": "1F3864", "text": "Measure/Classify"},
+        {"shape": "right_arrow", "left": 9.4, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "rounded_rectangle", "left": 10.1, "top": 3.3, "width": 2.0, "height": 0.7, "fill": "C00000", "text": "Route"}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Product B — Vertical AI positioning",
+      "bullets": [
+        {"level": 0, "text": "What it is today (one line)."},
+        {"level": 0, "bold": true, "text": "Target agentic flow + link-gap note."}
+      ],
+      "shapes": [
+        {"shape": "oval", "left": 0.4, "top": 3.3, "width": 1.8, "height": 0.7, "fill": "2E75B6", "text": "Twin/App"},
+        {"shape": "right_arrow", "left": 2.3, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "diamond", "left": 3.0, "top": 3.2, "width": 1.6, "height": 0.9, "fill": "ED7D31", "text": "Vision Agent"},
+        {"shape": "right_arrow", "left": 4.8, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "rounded_rectangle", "left": 5.5, "top": 3.3, "width": 2.0, "height": 0.7, "fill": "1F3864", "text": "Compare"},
+        {"shape": "right_arrow", "left": 7.7, "top": 3.55, "width": 0.6, "height": 0.25, "fill": "404040", "text": ""},
+        {"shape": "rounded_rectangle", "left": 8.4, "top": 3.3, "width": 1.9, "height": 0.7, "fill": "C00000", "text": "Flag -> task"}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "The moat: one agent runtime, two front-ends",
+      "bullets": [
+        {"level": 0, "bold": true, "text": "Agent roster (shared): Vision / Measure / Classify / Compare / Route / Drift / Report"},
+        {"level": 0, "text": "Offline edge for A, web twin for B. Optional encrypted sync."},
+        {"level": 0, "bold": true, "text": "Lower cost to scale, one pitch surface, future-proof."}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Roadmap — thin agent layer, no rebuild",
+      "bullets": [
+        {"level": 0, "bold": true, "text": "Phase 1: wrap detector output in Measure/Classify/Route agents."},
+        {"level": 0, "bold": true, "text": "Phase 2: Compare Agent auto-fills records from baseline delta."},
+        {"level": 0, "bold": true, "text": "Phase 3: Drift Agent + close cross-product link gap."}
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "The sale-grade story",
+      "subtitle": "Agentic · Defensible · Two products, one runtime · Future-proof"
+    }
+  ]
+}

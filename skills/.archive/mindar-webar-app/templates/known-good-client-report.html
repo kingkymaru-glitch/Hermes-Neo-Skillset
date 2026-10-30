@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- known-good-client-report.html — read-only 3D client report (no camera, no marker).
+     Reuses ar-core.js's LUNAV_AR.loadModel(mount, modelDef, setStatus) which spawns node
+     markers as CHILDREN of the mount, so they inherit the model transform automatically.
+     Pattern proven this session (2026-08-23): LunaV Tasik Cempaka Gazebo Test AR1.
+     This is the CLIENT deliverable — field AR (setup.html) stays inspector-only.
+     Copy + edit. Keep /ar path so middleware (Vercel) + Supabase anon key are reachable. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>LunaV — Structure Report</title>
+  <script src="assets/aframe.min.js"></script>
+  <script src="assets/aframe-extras.min.js"></script>
+  <script src="assets/qrcode.min.js"></script>
+  <script src="ar-core.js"></script>
+  <style>
+    html,body{margin:0;height:100%;background:#0b0e14;color:#e8edf3;font-family:system-ui,sans-serif;overflow:hidden}
+    #render{position:fixed;inset:0;width:100%;height:100%}
+    #findingsList{position:fixed;top:0;right:0;width:34%;max-width:320px;max-height:100%;overflow:auto;background:rgba(12,16,22,.92);padding:.6rem;border-left:1px solid #2a3441}
+    #findingsList .item{padding:.5rem;margin-bottom:.4rem;border-radius:8px;background:#161c24;cursor:pointer}
+    #findingsList .item .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:.4rem}
+    #pTitle{position:fixed;top:.6rem;left:.8rem;font-size:1rem;font-weight:600;z-index:5}
+    #summary{position:fixed;top:2.1rem;left:.8rem;font-size:.72rem;color:#9aa4b2;z-index:5;max-width:60%}
+    #status{position:fixed;bottom:.6rem;left:.8rem;font-size:.7rem;color:#7f9;z-index:5}
+    #qr{position:fixed;bottom:.6rem;right:.8rem;z-index:5;background:#fff;padding:4px;border-radius:6px}
+    #qr img{max-width:96px}
+  </style>
+</head>
+<body>
+  <div id="pTitle"></div>
+  <div id="summary"></div>
+  <div id="render">
+    <a-scene background="transparent: true" renderer="colorManagement:true, alpha:true" embedded>
+      <a-entity id="mount" position="0 0 0" orbit-controls="target: 0 0 0; enablePan:false"></a-entity>
+    </a-scene>
+  </div>
+  <div id="findingsList"></div>
+  <div id="status">init…</div>
+  <div id="qr"></div>
+
+  <script>
+    const API = window.LUNAV_AR;
+    const Q = new URLSearchParams(location.search);
+    const TOKEN = Q.get('token'), SUP = Q.get('sup'), KEY = Q.get('key');
+    API.init(SUP, KEY);
+    const mount = document.getElementById('mount');
+    let modelDef, markers = [];
+    const setStatus = (t) => { document.getElementById('status').textContent = t; };
+
+    function fitView() {
+      const obj = mount.object3D;
+      if (!obj || obj.children.length === 0) return;
+      const box = new THREE.Box3().setFromObject(obj);
+      if (box.isEmpty()) return;
+      const c = box.getCenter(new THREE.Vector3());
+      const s = box.getSize(new THREE.Vector3());
+      const r = Math.max(s.x, s.y, s.z);
+      const d = r / Math.tan((mount.getAttribute('camera') ? 50 : 50) * Math.PI / 360);
+      const cam = mount.sceneEl.camera;
+      cam.position.set(c.x, c.y + r * 0.1, c.z + d * 1.4);
+      cam.lookAt(c);
+      mount.setAttribute('orbit-controls', 'target', `${c.x} ${c.y} ${c.z}`);
+      mount.flushToDOM();
+    }
+
+    function focusNode(idx) {
+      const node = document.getElementById('node-' + idx);
+      if (!node) return;
+      // pulse the node red so the client sees exactly which part
+      node.setAttribute('scale', '2 2 2');
+      setTimeout(() => node.setAttribute('scale', '1 1 1'), 600);
+    }
+
+    function renderFindings() {
+      const list = document.getElementById('findingsList');
+      if (!markers.length) { list.innerHTML = '<p style="color:#9aa4b2;font-size:.85rem">No findings tagged on this structure yet.</p>'; return; }
+      const colors = { PASS:'#3ddc84', WARNING:'#f5c542', FAIL:'#ff5a5a' };
+      list.innerHTML = markers.map((m, i) => {
+        const c = colors[m.status] || '#9aa4b2';
+        return `<div class="item" data-idx="${i}"><span class="dot" style="background:${c}"></span><b>${m.title || ('Finding ' + (i+1))}</b><br><small style="color:#9aa4b2">${m.status || ''}</small></div>`;
+      }).join('');
+      list.querySelectorAll('.item').forEach(el => el.onclick = () => focusNode(el.dataset.idx));
+    }
+
+    async function load() {
+      if (!TOKEN) { setStatus('No token in link'); return; }
+      setStatus('loading report…');
+      try {
+        const bundle = await API.fetchBundle(TOKEN);
+        modelDef = (bundle.models || [])[0];
+        if (!modelDef) { setStatus('No model for this project'); return; }
+        markers = modelDef.markers || [];
+        if (bundle.project && bundle.project.project_name) document.getElementById('pTitle').textContent = bundle.project.project_name;
+        API.loadModel(mount, modelDef, setStatus);
+        mount.addEventListener('model-loaded', () => { setStatus('ready — drag to orbit'); fitView(); }, { once: true });
+        renderFindings();
+        setStatus('ready — drag to orbit');
+        new QRCode(document.getElementById('qr'), location.href);
+      } catch (e) { setStatus('load error: ' + e.message); }
+    }
+    load();
+  </script>
+</body>
+</html>

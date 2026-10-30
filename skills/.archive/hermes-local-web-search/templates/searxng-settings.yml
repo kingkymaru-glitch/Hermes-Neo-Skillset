@@ -1,0 +1,12 @@
+use_default_settings: true
+general:
+  instance_name: "rtessera-review"
+search:
+  formats:
+    - html
+    - json
+server:
+  bind_address: "0.0.0.0"
+  port: 8080
+  method: "POST"
+  secret_key: "a7f3c91e2b6d4f08e5c1a9b3d7e2f4c6b8a0d1e3f5c7b9a2d4e6f8c0b1a3d5e7"
