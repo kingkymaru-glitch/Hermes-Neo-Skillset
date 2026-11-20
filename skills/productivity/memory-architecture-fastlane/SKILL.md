@@ -67,21 +67,29 @@ state to survive it (e.g. an identity override, a standing instruction):
   and the verified test transcript.
 
 ## Use holographic store directly (verify/promote)
+Since Hermes v0.21.7 the provider is a STANDALONE plugin (core dropped the
+bundled `plugins/memory/holographic/`). It lives at `$HERMES_HOME/plugins/holographic/`
+and the DB is per-profile: `$HERMES_HOME/memory_store.db`. In-session, prefer
+the `fact_store` / `fact_feedback` tools over direct imports.
+
 ```python
 import sys, os
 sys.path.insert(0, os.path.expanduser("~/.hermes/hermes-agent"))
-os.environ.setdefault("HERMES_HOME", os.path.expanduser("~/.hermes"))
-from plugins.memory.holographic.store import MemoryStore
-store = MemoryStore()  # lazy sqlite init at ~/.hermes/memory_store.db
+sys.path.insert(0, os.path.join(os.environ["HERMES_HOME"], "plugins"))
+from holographic.store import MemoryStore   # v0.30+ standalone plugin
+store = MemoryStore()  # lazy sqlite init at $HERMES_HOME/memory_store.db
 fid = store.add_fact(content="...", category="short_term", tags="a,b")
-# query via FactRetriever, or read SQLite:
-# sqlite3 ~/.hermes/memory_store.db "SELECT fact_id,content FROM facts WHERE category='short_term'"
+# v0.30 API: store.read(sql, params) is RAW SQL; store.list_facts(),
+# store.forget_fact(fid), store.count_facts(). No .search() on the store —
+# ranked search lives in the provider (fact_store tool).
+# sqlite3 "$HERMES_HOME/memory_store.db" "SELECT fact_id,content FROM facts WHERE category='short_term'"
 ```
 Note: `add_fact(content, category="general", tags="")` — no `trust` kwarg.
+Verified live 2026-11-20 on v0.30.0 (add → read-back → forget round-trip).
 
 ## Verification
 - `fastlane.md` exists + loads at session start.
-- `sqlite3 ~/.hermes/memory_store.db "SELECT category,COUNT(*) FROM facts GROUP BY category"` shows short_term + project rows.
+- `sqlite3 "$HERMES_HOME/memory_store.db" "SELECT category,COUNT(*) FROM facts GROUP BY category"` shows short_term + project rows.
 - A promoted fact appears in MEMORY.md/USER.md or as a project-category fact.
 
 
