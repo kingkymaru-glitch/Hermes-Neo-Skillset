@@ -1,7 +1,7 @@
 ---
 name: review-mining
 description: When the user wants to research customer pain points, complaints, or sentiment using review platforms like Trustpilot, G2, Capterra, or app stores. Also use when the user mentions "what are users saying", "competitor reviews", "pain points", or "voice of customer research".
-related: [competitive-analysis, user-research-synthesis, feedback-synthesis, cold-outreach]
+related: [competitor-profiling, customer-research, customer-research, cold-email]
 reads: [startup-context]
 ---
 
@@ -100,10 +100,10 @@ reads: [startup-context]
 - Mining once and never returning (do this quarterly)
 
 ## Related Skills
-- `competitive-analysis` — for broader competitor research beyond reviews
-- `user-research-synthesis` — for synthesizing your own customer interviews
-- `feedback-synthesis` — for analyzing feedback from your own users
-- `cold-outreach` — use voice-of-customer language in prospecting emails
+- `competitor-profiling` — for broader competitor research beyond reviews
+- `customer-research` — for synthesizing your own customer interviews
+- `customer-research` — for analyzing feedback from your own users
+- `cold-email` — use voice-of-customer language in prospecting emails
 
 ## Examples
 

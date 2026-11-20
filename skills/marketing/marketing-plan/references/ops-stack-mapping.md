@@ -46,7 +46,7 @@ The plan's Section 11 makes this thesis explicit by:
 | `paywalls` | Optimize paywalls and upgrade screens | Trial → paid conversion (also Revenue) |
 | `popups` | Optimize popups, modals, slide-ins | Lead capture + activation prompts |
 | `copywriting` | Write marketing copy | Onboarding screens, paywall copy, CTAs |
-| `copy-editing` | Edit and improve existing copy | Voice / clarity pass before ship |
+| `copywriting` | Edit and improve existing copy | Voice / clarity pass before ship |
 | `copycraft` | Real-time copy variation overlay | Live copy iteration during reviews |
 | `website-copy` | Write full website copy (stage-8 from CF process) | Comprehensive site copy production |
 | `ab-testing` | Plan A/B tests | Structure for onboarding variant tests |
@@ -58,7 +58,7 @@ The plan's Section 11 makes this thesis explicit by:
 |---|---|---|
 | `emails` | Design email sequences | Customer.io / Mailchimp / Resend flow building |
 | `churn-prevention` | Build cancellation flows, save offers, win-back | Reduce churn, recover failed payments |
-| `copywriting` / `copy-editing` | Email copy production | Lifecycle email content |
+| `copywriting` / `copywriting` | Email copy production | Lifecycle email content |
 | `paywalls` | (cross-cuts) — upgrade prompts in retention emails | Upsell within lifecycle |
 | `ab-testing` | Test email variants | Subject line, CTA, timing tests |
 

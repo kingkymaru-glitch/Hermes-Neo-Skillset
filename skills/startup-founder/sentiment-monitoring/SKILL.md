@@ -1,7 +1,7 @@
 ---
 name: sentiment-monitoring
 description: When the user wants to monitor reviews, mentions, and community sentiment about their own product. Also use when the user mentions "track our reviews", "what are people saying about us", "brand monitoring", "reputation management", or "review alerts".
-related: [review-mining, feedback-synthesis, churn-analysis, community-discovery]
+related: [review-mining, customer-research, churn-prevention, community-discovery]
 reads: [startup-context]
 ---
 
@@ -127,8 +127,8 @@ This is **different from `review-mining`** (mining competitor reviews for pain p
 
 ## Related Skills
 - `review-mining` — for mining COMPETITOR reviews (this skill monitors YOUR reviews)
-- `feedback-synthesis` — for synthesizing feedback patterns into product decisions
-- `churn-analysis` — negative reviews often correlate with churn signals
+- `customer-research` — for synthesizing feedback patterns into product decisions
+- `churn-prevention` — negative reviews often correlate with churn signals
 - `community-discovery` — to find communities where people discuss your product
 
 ## Examples

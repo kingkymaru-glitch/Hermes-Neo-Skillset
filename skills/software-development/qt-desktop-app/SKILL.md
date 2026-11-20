@@ -128,7 +128,7 @@ value it should be. Numbers settle questions that a description cannot.
   the output being studied. Pin both halves — everything in the group returns to its default,
   and something outside it does not move. Re-derive the output after resetting, or the widgets
   and the picture disagree (see `references/live-instrument-panels.md`).
-- Ship a double-click launcher, not a terminal command. See the `macos-desktop-launcher`
+- Ship a double-click launcher, not a terminal command. See the `macos-desktop-launchers`
   skill (and its `references/app-bundle.md`) for the `.app` bundle + custom icon recipe.
 - **A control needed DURING an immersive mode must not live in a closable panel.** Panels
   are the right home for parameters; a control the user reaches for while the panels are
@@ -165,7 +165,7 @@ value it should be. Numbers settle questions that a description cannot.
   `references/live-instrument-panels.md`.
 
 ## See also
-- `macos-desktop-launcher` — `.command`/`.app` launcher pitfalls and the custom-icon recipe.
+- `macos-desktop-launchers` — `.command`/`.app` launcher pitfalls and the custom-icon recipe.
 - `references/per-frame-budget.md` — profiling a live processed feed: splitting avoidable
   overhead from genuine per-pixel work before answering "is this my hardware?", the
   allocation-churn and throwaway-copy patterns, LUT vs fused-pass vs interpolating-resize.

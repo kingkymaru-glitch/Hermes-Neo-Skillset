@@ -1,4 +1,4 @@
-# OCR & Document Text Extraction (merged from the ocr-and-documents skill)
+# OCR & Document Text Extraction (merged from the pdf skill)
 
 Scripts referenced below live in this skill's scripts/ directory.
 # PDF & Document Extraction

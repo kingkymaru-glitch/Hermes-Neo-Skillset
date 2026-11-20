@@ -50,7 +50,7 @@ The selected theme is stored in `projects.brand_theme` (text + CHECK constraint)
 
 4. **DB CHECK constraint** — `brand_theme` has `CHECK (brand_theme IN (...))`.
    A new value is REJECTED on save unless you extend it (see
-   `supabase-js-column-pitfalls/references/working-migrations.md` §5). Ship a
+   `supabase-backend/references/working-migrations.md` §5). Ship a
    migration file under `supabase/migrations/` and have the user run it in the
    Supabase SQL Editor (no CLI/service-key access from this environment):
    ```sql

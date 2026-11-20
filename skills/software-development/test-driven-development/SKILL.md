@@ -360,3 +360,10 @@ Otherwise → not TDD
 ```
 
 No exceptions without the user's explicit permission.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/tdd.md` — absorbed `matt-engineering/tdd`

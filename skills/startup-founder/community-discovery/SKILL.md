@@ -1,7 +1,7 @@
 ---
 name: community-discovery
 description: When the user wants to find Slack groups, Discord servers, Reddit communities, forums, or online communities where their target audience hangs out. Also use when the user mentions "where to promote", "find communities", "community marketing", or "distribution channels".
-related: [cold-outreach, content-strategy, launch-strategy, landing-page]
+related: [cold-email, content-strategy, launch, landing-page]
 reads: [startup-context]
 ---
 
@@ -105,9 +105,9 @@ reads: [startup-context]
 - Giving up after 2 weeks because no one clicked your link
 
 ## Related Skills
-- `cold-outreach` — for direct outreach to individuals found through communities
+- `cold-email` — for direct outreach to individuals found through communities
 - `content-strategy` — for creating content to share in communities
-- `launch-strategy` — for using communities as launch distribution channels
+- `launch` — for using communities as launch distribution channels
 - `landing-page` — to convert community traffic into signups
 
 ## Examples

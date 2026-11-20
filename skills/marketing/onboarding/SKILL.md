@@ -259,3 +259,10 @@ When recommending experiments, consider tests for:
 - **emails**: For onboarding email series
 - **paywalls**: For converting to paid during/after onboarding
 - **ab-testing**: For testing onboarding changes
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/onboarding-flow.md` — absorbed `startup-founder/onboarding-flow`

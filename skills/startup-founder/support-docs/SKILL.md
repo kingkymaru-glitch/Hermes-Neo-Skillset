@@ -1,7 +1,7 @@
 ---
 name: support-docs
 description: When the user needs to create help center articles, FAQs, troubleshooting guides, API documentation, or getting-started guides for customers.
-related: [process-docs, onboarding-flow]
+related: [process-docs, onboarding]
 reads: [startup-context]
 ---
 
@@ -111,7 +111,7 @@ Every support document should follow this arc:
 
 ## Related Skills
 - `process-docs` — Chain when the support topic requires an internal SOP to handle edge cases or escalations that the customer-facing doc cannot resolve alone.
-- `onboarding-flow` — Chain when creating getting-started guides that serve as part of the new-user onboarding experience.
+- `onboarding` — Chain when creating getting-started guides that serve as part of the new-user onboarding experience.
 
 ## Examples
 

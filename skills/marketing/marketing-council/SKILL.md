@@ -153,7 +153,7 @@ Users can extend the bench ("add my own advisor"). Create a dossier following th
 
 - **positioning** / **product-marketing**: When Dunford's take wins — execute the positioning work
 - **offers** / **pricing**: When Hormozi/Halbert direction wins — build the offer
-- **copywriting** / **copy-editing**: When the council reviewed copy — execute revisions
+- **copywriting** / **copywriting**: When the council reviewed copy — execute revisions
 - **ads** / **ad-creative**: When the debate was media or creative strategy
 - **content-strategy** / **social**: When Handley/Vaynerchuk direction wins
 - **brand-strategy** / **marketing-psychology**: For Sharp's availability work and Sutherland's behavioral mechanics

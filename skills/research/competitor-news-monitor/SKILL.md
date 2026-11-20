@@ -86,3 +86,10 @@ Report per event: company, event, date, evidence links, what changed, why it mat
 - [ ] Source failures reported as coverage gaps, never as "no news."
 - [ ] Materiality decisions replay consistently from the watch contract.
 - [ ] The cutoff advanced only for successfully covered sources.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/competitor-monitoring.md` — absorbed `startup-founder/competitor-monitoring`

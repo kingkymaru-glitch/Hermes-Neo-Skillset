@@ -65,5 +65,5 @@ Include:
 
 ## Related
 - [[founder-workflow]] (one-chunk-per-turn, discovery-before-build)
-- [[maru-collab-style]] (terse, ADHD no-thinking-process)
+- [[founder-workflow]] (terse, ADHD no-thinking-process)
 - rina-task-saas-dev (RINA specifics — recommend `hermes curator adopt` to patch it)

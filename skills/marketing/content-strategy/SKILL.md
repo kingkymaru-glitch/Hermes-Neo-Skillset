@@ -437,3 +437,10 @@ Visual or structured representation of how content interconnects.
 - **emails**: For email-based content
 - **social**: For social media content, content atomization, and repurposing execution
 - **launch**: For the ORB channel-type playbook and launch-day distribution
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/content-strategy.md` — absorbed `startup-founder/content-strategy`

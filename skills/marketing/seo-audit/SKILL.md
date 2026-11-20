@@ -497,3 +497,10 @@ Same format as above
 - **schema**: For implementing structured data
 - **cro**: For optimizing pages for conversion (not just ranking)
 - **analytics**: For measuring SEO performance
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/seo-technical.md` — absorbed `startup-founder/seo-technical`

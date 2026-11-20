@@ -8,7 +8,7 @@ description: >
   file into modules. Use when the user asks to rename the app, change role
   gates to global visibility, or break up a huge component into tabs/modals.
   Distinct from vite-scaffold-verification (new projects) and
-  supabase-auth-gate (auth architecture).
+  supabase-backend (auth architecture).
 trigger:
   - rename app/brand in existing Vite React app
   - change all role-scoped feature to globally visible
@@ -99,5 +99,5 @@ npx eslint src/path/File.tsx 2>&1 | grep -E "error" | head -30
 
 ## When Not To Use
 - New project scaffolding → use vite-scaffold-verification.
-- Auth architecture → use supabase-auth-gate.
+- Auth architecture → use supabase-backend.
 - Bug-specific debugging with unknown root cause → use systematic-debugging first.

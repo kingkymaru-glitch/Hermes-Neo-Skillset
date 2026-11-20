@@ -422,3 +422,10 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **onboarding**: For activation to prevent early churn
 - **analytics**: For setting up churn signal events
 - **ab-testing**: For testing cancel flow variations with statistical rigor
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/churn-analysis.md` — absorbed `startup-founder/churn-analysis`

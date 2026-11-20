@@ -44,29 +44,6 @@ Restart Hermes Agent. On startup it will:
 
 You can then use the tools naturally -- just ask the agent to get the current time.
 
-### Adding a server with the CLI (preferred over hand-editing)
-
-`hermes mcp add` is discovery-first: it connects, lists the server's tools, asks which to
-enable, then writes the entry into `config.yaml` itself (no hand edit, no indentation risk).
-
-```bash
-hermes mcp add <name> --command /abs/path/to/binary --args <arg1> <arg2>
-hermes mcp test <name>        # re-check the connection
-hermes mcp configure <name>   # toggle individual tools afterwards
-hermes mcp remove <name>
-```
-
-- **The enable prompt blocks a non-interactive add.** It ends on
-  `Enable all N tools? [Y/n/select]:` and cancels when stdin is not a TTY, leaving nothing
-  written. Pipe the answer: `yes | hermes mcp add ...`.
-- **Scope the server in its own args before enabling, not afterwards.** A full-permission
-  server can advertise 150+ tools, which buries the useful ones; pass the server's own
-  restriction flag (for example `--args mcp --permissions sandbox:all` → 14 tools).
-  Permission scoping is the server's flag, not a Hermes config key.
-- **Use an absolute `--command` path.** MCP subprocesses get a filtered environment (PATH is
-  inherited, your shell's exports are not), so a binary living only in a non-standard bin dir
-  is not found.
-
 ## Configuration Reference
 
 Each entry under `mcp_servers` is a server name mapped to its config. There are two transport types: **stdio** (command-based) and **HTTP** (url-based).
@@ -363,5 +340,4 @@ Disable sampling for untrusted servers with `sampling: { enabled: false }`.
 - Tool results are returned as JSON with either `{"result": "..."}` or `{"error": "..."}`
 - The native MCP client is independent of `mcporter` -- you can use both simultaneously
 - Server connections are persistent and shared across all conversations in the same agent process
-- A newly added server's tools are NOT in an already-running session's toolset: start a new
-  session, or run `/reload-mcp` in the open one (`hermes mcp add` prints the same reminder)
+- Adding or removing servers requires restarting the agent (no hot-reload currently)

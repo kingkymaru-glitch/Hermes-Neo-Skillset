@@ -53,7 +53,7 @@ For lightweight PRDs, sections 2, 3, and 8 can be condensed to 2-3 sentences eac
 ## Related Skills
 - `roadmap-planning` -- Chain after writing PRDs to slot the initiative into the broader roadmap with dependencies and timelines.
 - `mvp-scoping` -- Chain before writing a PRD to determine what to include in v1 vs. defer to later releases.
-- `user-research-synthesis` -- Chain before writing a PRD to ground the Background and Market Segments sections in real customer data.
+- `customer-research` -- Chain before writing a PRD to ground the Background and Market Segments sections in real customer data.
 
 ## Examples
 

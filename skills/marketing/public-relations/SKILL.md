@@ -152,3 +152,10 @@ Go to [podcast-guest-prep.md](references/podcast-guest-prep.md): research the sh
 
 ### "Build my press page"
 Use the checklist above. Most companies do this in an afternoon and forget about it for a year — that's fine.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/earned-media-outreach.md` — absorbed `startup-founder/earned-media-outreach`

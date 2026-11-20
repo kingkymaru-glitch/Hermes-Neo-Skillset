@@ -1,7 +1,7 @@
 ---
 name: proposal-generation
 description: When a founder needs to create a sales proposal, statement of work, contract, NDA, or master service agreement. Activate when the user mentions proposal, SOW, quote, contract, NDA, MSA, or needs to formalize a deal.
-related: [sales-script, cold-outreach]
+related: [sales-enablement, cold-email]
 reads: [startup-context]
 ---
 
@@ -97,8 +97,8 @@ A Statement of Work is operational, not persuasive. Key sections:
 **Disclaimer:** Not a substitute for legal counsel. Use these as strong starting frameworks; review with an attorney for high-value or complex engagements.
 
 ## Related Skills
-- `sales-script` — Use for the sales conversations that precede the proposal
-- `cold-outreach` — Use to generate the initial conversations that lead to proposal-stage deals
+- `sales-enablement` — Use for the sales conversations that precede the proposal
+- `cold-email` — Use to generate the initial conversations that lead to proposal-stage deals
 
 ## Examples
 

@@ -1,7 +1,7 @@
 ---
 name: accelerator-application
 description: When the user wants to apply to startup accelerators, incubators, or fellowship programs. Also use when the user mentions "YC application", "Techstars", "accelerator", or "apply to programs".
-related: [pitch-deck, fundraising-email, investor-research]
+related: [pitch-deck, cold-email, investor-research]
 reads: [startup-context]
 ---
 
@@ -144,7 +144,7 @@ A: [Draft answer within word limit]
 
 ## Related Skills
 - `pitch-deck` — accelerator interviews often involve a short pitch
-- `fundraising-email` — for follow-up communication with program partners
+- `cold-email` — for follow-up communication with program partners
 - `investor-research` — accelerator partners are also investors
 
 ## Examples

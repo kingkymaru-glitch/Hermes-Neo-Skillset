@@ -328,3 +328,10 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **ab-testing**: For testing email elements
 - **popups**: For email capture popups
 - **revops**: For lifecycle stages that trigger email sequences
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/email-marketing.md` — absorbed `startup-founder/email-marketing`

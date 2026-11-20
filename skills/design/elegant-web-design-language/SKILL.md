@@ -143,5 +143,5 @@ Two variants that differ only in accent colour are wasted effort. Give each a RE
 note on what it is strong and weak at, and state your own recommendation plainly.
 
 HTML mockups live OUTSIDE the app repo and are served over localhost; see
-`desktop-preview` for the path/TCC pitfalls, and `lunav-family-ui` for the 3D twin
+`desktop-preview` for the path/TCC pitfalls, and `lunav-family-frontend` for the 3D twin
 application of this register.

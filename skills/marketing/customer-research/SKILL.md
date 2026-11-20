@@ -306,3 +306,11 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 | Planning content based on discovered topics | `content-strategy` |
 | Rolling research into a comprehensive marketing plan | `marketing-plan` |
 | Sizing the market (TAM/SAM/SOM) — see the market-sizing reference | `marketing-plan` |
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/user-research-synthesis.md` — absorbed `startup-founder/user-research-synthesis`
+- `references/merged/feedback-synthesis.md` — absorbed `startup-founder/feedback-synthesis`

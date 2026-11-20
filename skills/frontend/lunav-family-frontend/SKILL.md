@@ -242,3 +242,10 @@ eyeballs the live drawer or says "commit". Then commit as kingkymaru@gmail.com +
 
 ## FOUNDER DESIGN MANDATE — 'designer hat'
 For visual/UI/landing-page work MARU explicitly wants the agent to **interpret, not literal-follow**: *'put on your designer hat, don't take what i instruct literally, u may adjust things to make it look awesome, but stay with the idea.'* Apply: read the brief for intent, exercise judgment, ship a working artifact, then iterate on his verbal feedback. He pivots mid-stream ('standby', 'change of mind, u deploy it') — adapt and execute the new direction WITHOUT re-litigating superseded constraints. Prefer previewing a running version over long up-front planning for visual work.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/lunav-family-ui.md` — absorbed `frontend/lunav-family-ui`

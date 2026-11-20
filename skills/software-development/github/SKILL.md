@@ -54,3 +54,10 @@ Supporting assets: `scripts/gh-env.sh` + `scripts/git-credential-token.py`
 - The workflow's own reference file defines done for that task.
 - Cross-cutting: every claim about remote state (CI, merge, release,
   issue state) is backed by a fresh `gh` read, never memory.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/pr.md` — absorbed `matt-engineering/pr`

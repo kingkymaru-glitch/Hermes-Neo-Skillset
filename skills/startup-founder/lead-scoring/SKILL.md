@@ -1,7 +1,7 @@
 ---
 name: lead-scoring
 description: When a founder needs to qualify inbound leads, define their ICP, build a lead scoring model, set MQL criteria, or route prospects through pipeline stages. Activate when the user mentions lead scoring, ICP, MQL, SQL, lead qualification, inbound leads, or pipeline design.
-related: [cold-outreach, sales-script]
+related: [cold-email, sales-enablement]
 reads: [startup-context]
 ---
 
@@ -88,8 +88,8 @@ A perfect-fit company that never engages is not an MQL. A student downloading ev
 - **Speed-to-lead is critical.** Contact within 5 minutes is 21x more likely to qualify.
 
 ## Related Skills
-- `cold-outreach` — Use the ICP and scoring to prioritize who to reach out to first
-- `sales-script` — Use pipeline stage definitions to prepare the right script for each stage
+- `cold-email` — Use the ICP and scoring to prioritize who to reach out to first
+- `sales-enablement` — Use pipeline stage definitions to prepare the right script for each stage
 
 ## Examples
 

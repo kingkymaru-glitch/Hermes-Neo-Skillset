@@ -73,7 +73,7 @@ Specific metrics and thresholds that determine whether the MVP validated the hyp
 ## Related Skills
 - `prd-writing` — After scoping the MVP, write a PRD for the Must Have set.
 - `roadmap-planning` — Place Should Have and Could Have items into the roadmap's Next and Later horizons.
-- `user-research-synthesis` — Use customer insights to validate which features are truly Must Have vs. assumed Must Have.
+- `customer-research` — Use customer insights to validate which features are truly Must Have vs. assumed Must Have.
 
 ## Examples
 

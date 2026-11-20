@@ -90,3 +90,11 @@ gives the team a tracked time-series without exposing PII.
 - Pending user invisible to admin ("0 pending" but row exists) → `profiles_select`
   over-restricted (supabase-backend P22).
 - Adding a gating column locks out the owner → backfill (supabase-backend P20).
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/ai-coding-team-review.md` — absorbed `software-development/ai-coding-team-review`
+- `references/merged/triumvirate-execution-framework.md` — absorbed `software-development/triumvirate-execution-framework`

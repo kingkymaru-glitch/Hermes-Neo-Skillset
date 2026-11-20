@@ -423,3 +423,10 @@ For partner sales enablement, see the [tools registry](https://github.com/coreyh
 - **revops**: For lead lifecycle, scoring, routing, and pipeline management
 - **pricing**: For pricing decisions and packaging
 - **product-marketing**: For foundational positioning and messaging
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/sales-script.md` — absorbed `startup-founder/sales-script`

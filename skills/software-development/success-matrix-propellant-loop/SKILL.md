@@ -32,7 +32,7 @@ license: MIT
 - One propellant rule per milestone (not a list) — keeps it actionable.
 - The rule must be general (applies to future work), not a one-off fix.
 - Append to MEMORY.md via the memory tool / patch; do not only state it.
-- Pair with `triumvirate-execution-framework` (dissect→design→execute), then
+- Pair with `ai-assisted-team` (dissect→design→execute), then
   this audit closes the loop.
 
 ## Verification

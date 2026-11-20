@@ -1,7 +1,7 @@
 ---
 name: interview-kit
 description: When the user needs to design an interview process, create interview questions, build scorecards, calibrate interviewers, or evaluate candidates for a role.
-related: [job-description, sourcing-outreach]
+related: [job-description, cold-email]
 reads: [startup-context]
 ---
 
@@ -96,7 +96,7 @@ Always present comp as a range with a target midpoint, not a single number.
 
 ## Related Skills
 - `job-description` — Use the JD's competency requirements as input for the interview loop
-- `sourcing-outreach` — Align outreach messaging with the interview process so candidates know what to expect
+- `cold-email` — Align outreach messaging with the interview process so candidates know what to expect
 
 ## Examples
 

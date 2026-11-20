@@ -49,7 +49,7 @@ Loops are grouped by function. Naming follows the "The X loop" convention.
 - **Check cadence**: Monthly
 - **Acts when**: A page's traffic/rankings declined materially over the trailing 90 days.
 - **Purpose**: Refresh decaying content before it slides out of rankings.
-- **Skills used**: `copy-editing`, `seo-audit`, `content-strategy`
+- **Skills used**: `copywriting`, `seo-audit`, `content-strategy`
 - **Loop body**:
   1. Find pages with declining trailing-90-day traffic/rankings.
   2. Pick the highest-value decayers.
@@ -393,7 +393,7 @@ Loops are grouped by function. Naming follows the "The X loop" convention.
 - **Check cadence**: Monthly
 - **Acts when**: A sequence email underperforms on real engagement or contains stale content.
 - **Purpose**: Keep automated sequences performing as the product and audience evolve.
-- **Skills used**: `emails`, `analytics`, `copy-editing`
+- **Skills used**: `emails`, `analytics`, `copywriting`
 - **Loop body**:
   1. Pull per-email performance — clicks, conversions, replies, unsubscribes, spam complaints, bounces (**not opens** — open tracking is unreliable post-privacy-changes).
   2. Flag weak performers and stale references (old features, dates, pricing).

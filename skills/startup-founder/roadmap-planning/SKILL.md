@@ -78,7 +78,7 @@ Numbered list of what must be true for this roadmap to succeed.
 ## Related Skills
 - `prd-writing` -- Once an initiative is committed in the Now horizon, write a PRD to spec it out.
 - `mvp-scoping` -- Before placing an initiative on the roadmap, scope its MVP to get a realistic effort estimate.
-- `user-research-synthesis` -- Use customer insights to validate which outcomes matter most to your target segments.
+- `customer-research` -- Use customer insights to validate which outcomes matter most to your target segments.
 
 ## Examples
 

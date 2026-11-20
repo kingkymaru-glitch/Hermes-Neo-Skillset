@@ -8,7 +8,7 @@ platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [hermes, update, git, maintenance, cli, channels, gateway]
-    related_skills: [hermes-agent, hermes-team-coordination]
+    related_skills: [hermes-agent, hermes-team-kanban]
 ---
 
 # Hermes Self-Update & Update Diagnostics

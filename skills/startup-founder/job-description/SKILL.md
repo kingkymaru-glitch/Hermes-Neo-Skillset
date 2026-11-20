@@ -1,7 +1,7 @@
 ---
 name: job-description
 description: When the user needs to write, review, or improve a job posting for a startup role.
-related: [interview-kit, sourcing-outreach, employer-brand]
+related: [interview-kit, cold-email, employer-brand]
 reads: [startup-context]
 ---
 
@@ -67,7 +67,7 @@ A complete, ready-to-post job description in markdown with the following section
 
 ## Related Skills
 - `interview-kit` — After posting the JD, design the interview loop and scorecards for this role.
-- `sourcing-outreach` — Use the JD as the basis for personalized outreach messages to passive candidates.
+- `cold-email` — Use the JD as the basis for personalized outreach messages to passive candidates.
 - `employer-brand` — Ensure the JD tone and content align with your careers page and employer brand narrative.
 
 ## Examples

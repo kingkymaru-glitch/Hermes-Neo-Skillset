@@ -1380,3 +1380,10 @@ corrupted their argument lists. Rules:
   replay of all-2xx is healthy output, not a bug report.
 - For repeated multi-field data (release batches), do not build one command with `\` line
   continuations; pass a delimited file and read it with `while IFS='|' read -r tag commit title body`.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/cdm-spatial-platform.md` — absorbed `software-development/cdm-spatial-platform`

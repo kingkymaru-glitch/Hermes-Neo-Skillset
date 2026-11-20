@@ -438,3 +438,10 @@ Only ask if not answered by context or input:
 - **ads**: For analyzing competitor ad strategies
 - **pricing**: For deeper pricing analysis informed by competitor profiles
 - **marketing-plan**: For sizing the market (TAM/SAM/SOM) with its market-sizing reference, including competitor-led estimates
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/competitive-analysis.md` — absorbed `startup-founder/competitive-analysis`

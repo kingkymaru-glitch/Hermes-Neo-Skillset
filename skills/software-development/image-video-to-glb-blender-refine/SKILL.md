@@ -237,3 +237,10 @@ Bundling Blender into a .dmg costs ~600MB stripped, and COLMAP must be bundled t
 not part of Blender). The result needs codesigning + notarisation or macOS reports the app
 as damaged. Blender is GPL: bundling and invoking it as a separate process is fine (mere
 aggregation, not linking), but ship its licence text and never imply Blender is your code.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/headless-blender-mesh-refinement.md` — absorbed `mlops/headless-blender-mesh-refinement`

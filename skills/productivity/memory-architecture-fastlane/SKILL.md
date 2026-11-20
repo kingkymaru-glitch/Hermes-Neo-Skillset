@@ -83,3 +83,10 @@ Note: `add_fact(content, category="general", tags="")` — no `trust` kwarg.
 - `fastlane.md` exists + loads at session start.
 - `sqlite3 ~/.hermes/memory_store.db "SELECT category,COUNT(*) FROM facts GROUP BY category"` shows short_term + project rows.
 - A promoted fact appears in MEMORY.md/USER.md or as a project-category fact.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/gbrain-memory-patterns.md` — absorbed `knowledge-management/gbrain-memory-patterns`

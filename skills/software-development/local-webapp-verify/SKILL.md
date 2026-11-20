@@ -8,7 +8,7 @@ platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [web, flask, verification, debugging, dev-server, localhost]
-    related_skills: [systematic-debugging, vite-build-verification, source-vs-rendered-verify]
+    related_skills: [systematic-debugging, local-webapp-verify, source-vs-rendered-verify]
 ---
 # Local Web-App Verification (served, not built)
 
@@ -262,3 +262,10 @@ and the JS-inline-style trap: `references/theme-restyle-verify.md`.
 ## Tight feedback loop (from systematic-debugging)
 The grep against the live server IS the red/green loop: red = old/stale,
 green = edit served. Run it after every UI change, not just at the end.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/vite-build-verification.md` — absorbed `frontend/vite-build-verification`

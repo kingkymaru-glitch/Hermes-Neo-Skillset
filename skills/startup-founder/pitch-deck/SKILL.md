@@ -1,7 +1,7 @@
 ---
 name: pitch-deck
 description: When the user wants to create, review, or restructure a fundraising pitch deck for seed or Series A. Also activates when the user mentions "deck", "pitch", "investor presentation", or "slide structure".
-related: [investor-research, data-room, fundraising-email]
+related: [investor-research, data-room, cold-email]
 reads: [startup-context]
 ---
 
@@ -80,7 +80,7 @@ Structured markdown with one H3 per slide. Each slide section contains:
 
 - `investor-research` — use before building the deck to tailor the narrative to specific investor interests
 - `data-room` — prepare the backup materials investors will request after seeing the deck
-- `fundraising-email` — write the outreach email that accompanies the deck
+- `cold-email` — write the outreach email that accompanies the deck
 
 ## Examples
 

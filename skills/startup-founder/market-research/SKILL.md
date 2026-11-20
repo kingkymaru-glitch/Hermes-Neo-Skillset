@@ -1,7 +1,7 @@
 ---
 name: market-research
 description: When the user needs to estimate market size, understand market dynamics, or validate that a market opportunity is large enough to pursue.
-related: [competitive-analysis, prd-writing]
+related: [competitor-profiling, prd-writing]
 reads: [startup-context]
 ---
 
@@ -68,7 +68,7 @@ Numbered list of what the market data means for product, pricing, and go-to-mark
 - **Consider currency and purchasing power parity** for international market sizing.
 
 ## Related Skills
-- `competitive-analysis` -- Pair market sizing with competitive landscape analysis to understand both the size of the prize and how contested it is.
+- `competitor-profiling` -- Pair market sizing with competitive landscape analysis to understand both the size of the prize and how contested it is.
 - `prd-writing` -- Use market segment data to ground the Market Segments section of a PRD in real numbers.
 - `roadmap-planning` -- Use growth trend analysis to time roadmap investments. Build for fast-growing segments first.
 

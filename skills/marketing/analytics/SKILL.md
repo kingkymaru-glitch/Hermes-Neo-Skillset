@@ -308,3 +308,10 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **seo-audit**: For organic traffic analysis
 - **cro**: For conversion optimization (uses this data)
 - **revops**: For pipeline metrics, CRM tracking, and revenue attribution
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/google-analytics.md` — absorbed `oh-my-design/google-analytics`

@@ -164,3 +164,13 @@ Use this data to inform your writing — not as a checklist to satisfy.
 - **social**: For LinkedIn and social posts
 - **product-marketing**: For establishing foundational positioning
 - **revops**: For lead scoring, routing, and pipeline management
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/cold-outreach.md` — absorbed `startup-founder/cold-outreach`
+- `references/merged/fundraising-email.md` — absorbed `startup-founder/fundraising-email`
+- `references/merged/partnership-outreach.md` — absorbed `startup-founder/partnership-outreach`
+- `references/merged/sourcing-outreach.md` — absorbed `startup-founder/sourcing-outreach`

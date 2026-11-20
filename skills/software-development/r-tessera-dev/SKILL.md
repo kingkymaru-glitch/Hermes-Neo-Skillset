@@ -101,7 +101,7 @@ this project.
 - Keep `drawerOpen` state in App.jsx and PASS it as a prop to `ProjectNodes`;
   do NOT also declare `const [drawerOpen, setDrawerOpen] = useState(...)` inside
   `ProjectNodes` — that duplicate prop+state declaration is a PARSE_ERROR that
-  the build will not catch via the `&&` chain (see vite-build-verification
+  the build will not catch via the `&&` chain (see local-webapp-verify
   Pitfall 13).
 
 ## Chrome / theme (LunaV-Studio-matched, STANDING since 2026-08-12)

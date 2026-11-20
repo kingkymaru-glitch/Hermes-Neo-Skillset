@@ -1,7 +1,7 @@
 ---
 name: founder-thought-leadership
 description: When the user wants to build personal brand, thought leadership, or IP as a founder on Twitter/X or LinkedIn. Also use when the user mentions "founder brand", "personal content", "build audience", or "grow my following".
-related: [social-content, content-strategy, landing-page]
+related: [social, content-strategy, landing-page]
 reads: [startup-context]
 ---
 
@@ -82,7 +82,7 @@ reads: [startup-context]
 - Abandoning after 2 weeks because "nothing happened" — compound effects take 90+ days
 
 ## Related Skills
-- `social-content` — for ongoing social media content beyond founder personal brand
+- `social` — for ongoing social media content beyond founder personal brand
 - `content-strategy` — for broader content planning across blog, SEO, and channels
 - `landing-page` — to convert audience attention into signups or leads
 

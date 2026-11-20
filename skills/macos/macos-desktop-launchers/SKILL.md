@@ -269,3 +269,10 @@ inheriting a legacy project name while driving a different product's server is a
 `open /path/to/launcher.command` then
 `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:PORT/` → expect 200.
 Tail the launcher log for `ModuleNotFoundError` / `Address already in use` / `Traceback`.
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/macos-desktop-launcher.md` — absorbed `software-development/macos-desktop-launcher`

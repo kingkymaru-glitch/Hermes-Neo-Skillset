@@ -409,3 +409,10 @@ From debugging sessions:
 - New bugs introduced: Near zero vs common
 
 **No shortcuts. No guessing. Systematic always wins.**
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/diagnosing-bugs.md` — absorbed `matt-engineering/diagnosing-bugs`

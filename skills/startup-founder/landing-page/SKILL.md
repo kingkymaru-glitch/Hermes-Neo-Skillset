@@ -1,7 +1,7 @@
 ---
 name: landing-page
 description: When the user needs to create, critique, or optimize a landing page for conversion -- including headline rewrites, CTA placement, layout restructuring, or full page copy drafts.
-related: [content-strategy, seo-technical, cold-outreach]
+related: [content-strategy, seo-audit, cold-email]
 reads: [startup-context]
 ---
 
@@ -62,8 +62,8 @@ reads: [startup-context]
 
 ## Related Skills
 - `content-strategy` -- when the landing page needs supporting content to drive traffic
-- `seo-technical` -- when the landing page needs to rank organically
-- `cold-outreach` -- when the landing page is the destination for outbound campaigns and copy must align with email messaging
+- `seo-audit` -- when the landing page needs to rank organically
+- `cold-email` -- when the landing page is the destination for outbound campaigns and copy must align with email messaging
 
 ## Examples
 

@@ -1,7 +1,7 @@
 ---
 name: daily-product-digest
 description: When the user wants a summary of what's trending on Product Hunt, Hacker News, Indie Hackers, or other product/startup communities. Also use when the user mentions "what launched today", "trending products", "HN front page", or "keep up with the market".
-related: [competitive-analysis, market-research, launch-strategy]
+related: [competitor-profiling, market-research, launch]
 reads: [startup-context]
 ---
 
@@ -91,9 +91,9 @@ Items directly related to your market ([category]).
 - Not connecting findings to the founder's own strategy
 
 ## Related Skills
-- `competitive-analysis` — for deep competitor research beyond daily monitoring
+- `competitor-profiling` — for deep competitor research beyond daily monitoring
 - `market-research` — for structured market sizing and trend analysis
-- `launch-strategy` — to apply launch tactics observed in the wild
+- `launch` — to apply launch tactics observed in the wild
 
 ## Examples
 

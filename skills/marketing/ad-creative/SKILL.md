@@ -441,4 +441,4 @@ node tools/clis/google-ads.js reports get --type ad_performance --date-range las
 - **copywriting**: For landing page copy (where ad traffic lands)
 - **ab-testing**: For structuring creative tests with statistical rigor
 - **marketing-psychology**: For psychological principles behind high-performing creative
-- **copy-editing**: For polishing ad copy before launch
+- **copywriting**: For polishing ad copy before launch

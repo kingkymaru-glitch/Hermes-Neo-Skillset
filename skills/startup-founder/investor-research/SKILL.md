@@ -1,7 +1,7 @@
 ---
 name: investor-research
 description: When the user wants to identify, evaluate, or prioritize potential investors for a fundraising round. Also activates when the user asks "who should I pitch?", "find me investors", "build an investor list", or mentions VC/angel targeting.
-related: [pitch-deck, fundraising-email]
+related: [pitch-deck, cold-email]
 reads: [startup-context]
 ---
 
@@ -89,7 +89,7 @@ Followed by a "Research Gaps" section listing anything that could not be verifie
 ## Related Skills
 
 - `pitch-deck` — tailor the deck narrative based on what specific investors care about
-- `fundraising-email` — write targeted outreach once the investor list is built
+- `cold-email` — write targeted outreach once the investor list is built
 
 ## Examples
 

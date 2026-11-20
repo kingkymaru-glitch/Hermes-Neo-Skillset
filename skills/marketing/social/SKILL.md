@@ -454,3 +454,10 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 - **launch**: For coordinating social with launches
 - **emails**: For nurturing social audience via email
 - **marketing-psychology**: For understanding what drives engagement
+
+
+## Merged references
+
+Former standalone skills absorbed here; read the matching file when its topic comes up.
+
+- `references/merged/social-content.md` — absorbed `startup-founder/social-content`
