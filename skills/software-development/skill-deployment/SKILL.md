@@ -56,8 +56,36 @@ rm -rf /tmp/<repo-name>
 find ~/.hermes/skills -name "SKILL.md" -type f | wc -l
 ```
 
+## Full profile sync from a canonical repo (name-keyed, proven 2026-11)
+
+Use when profiles drifted from the canonical repo (bloat, duplicates, stale
+versions). Never blind-copy the whole tree — profiles carry unique skills.
+
+1. Back up each profile first: `tar czf backup-<p>-skills.tar.gz -C <profile> skills`.
+2. Build three name sets from the repo, keyed by skill LEAF folder name:
+   active, archived (skills/.archive/), merged-loser (folders absorbed into
+   winners' references/merged/ — reconstruct from the restructure log).
+3. Per profile skill, decide by leaf name: repo-active → copy repo version to
+   the repo's canonical category path (rmtree target first so stale files
+   don't linger) and remove any old-path copy; repo-archived or merged-loser
+   → remove (backup + repo preserve it); in neither → KEEP (profile-specific,
+   e.g. strategy/, higgsfield-skills, web-design). Protect auto-captured/
+   from removal; on name collision park it, don't delete.
+4. Prune empty category dirs; remove root-level stray docs the repo relocated.
+5. Verify: active count == repo-active + kept; ZERO duplicate leaf names
+   (duplicate names confuse the index); spot-diff 3 synced skills against
+   the repo; confirm profile-specific survivors exist.
+
+Loader fact (verified in agent/skill_utils.py): EXCLUDED_SKILL_DIRS includes
+`.archive`, `.git`, `.hub`, `.curator_backups`, `node_modules`, `venv` —
+parking under skills/.archive/ genuinely de-indexes; support dirs
+(references/templates/assets/scripts) inside a skill root are not indexed
+as skills.
+
 ## Pitfalls
 
+- **Sync only the profiles the user names.** "Deploy to all" is a default for
+  fresh installs, not a license to touch unnamed profiles.
 - **Check license before deploying.** MIT/Apache-2.0 are safe. NOASSERTION or proprietary licenses need review.
 - **Check for paid APIs.** Many skill repos call paid APIs (Gemini, Higgsfield, Agnes). User requires free alternatives only.
 - **Skill description must be ≤60 chars** for the system prompt budget. Long descriptions get truncated and lose routing signal.
